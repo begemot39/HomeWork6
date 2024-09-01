@@ -3,8 +3,8 @@ package ru.netology.javaqa.HomeWork6.services;
 
 public class AnalyticalService {
 
-    public int allMonthsAmountCalc(long[] amountsByMonth) {
-        int totalAmount = 0;
+    public long allMonthsAmountCalc(long[] amountsByMonth) {
+        long totalAmount = 0;
 
         for (long amount : amountsByMonth) {
             totalAmount += amount;
@@ -13,7 +13,7 @@ public class AnalyticalService {
     }
 
     public long averageAmountCalc(long[] amountsByMonth) {
-        int averageAmount = 0;
+        long averageAmount = 0;
         for (long am : amountsByMonth) {
             averageAmount += am;
         }

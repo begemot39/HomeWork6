@@ -10,8 +10,8 @@ public class AnalyticalServiceTest {
 
     @Test
     public void testAllMonthsAmountCalc() {
-        int actual = service.allMonthsAmountCalc(amountsPerMonths);
-        int expected = 180;
+        long actual = service.allMonthsAmountCalc(amountsPerMonths);
+        long expected = 180;
         Assertions.assertEquals(expected, actual);
     }
 
