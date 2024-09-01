@@ -3,69 +3,69 @@ package ru.netology.javaqa.HomeWork6.services;
 
 public class AnalyticalService {
 
-    public int allMonthsAmountCalc(long[] monthsArr) {
+    public int allMonthsAmountCalc(long[] amountsByMonth) {
         int totalAmount = 0;
 
-        for (long amount : monthsArr) {
+        for (long amount : amountsByMonth) {
             totalAmount += amount;
         }
         return totalAmount;
-    };
+    }
 
-    public int averageAmountCalc(long[] monthsArr) {
+    public long averageAmountCalc(long[] amountsByMonth) {
         int averageAmount = 0;
-        for (long am : monthsArr) {
+        for (long am : amountsByMonth) {
             averageAmount += am;
         }
 
-        return averageAmount / monthsArr.length;
-    };
+        return averageAmount / amountsByMonth.length;
+    }
 
-    public int maxAmountMonthSeek(long[] monthsArr) {
+    public int maxAmountMonthSeek(long[] amountsByMonth) {
         int monthCount = 0;
 
-        for (int i = 0; i < monthsArr.length; i++) {
-            if (monthsArr[i] >= monthsArr[monthCount]) {
+        for (int i = 0; i < amountsByMonth.length; i++) {
+            if (amountsByMonth[i] >= amountsByMonth[monthCount]) {
                 monthCount = i;
             }
         }
         return monthCount + 1;
-    };
+    }
 
-    public int minAmountMonthSeek(long[] monthsArr) {
+    public int minAmountMonthSeek(long[] amountsByMonth) {
         int monthCount = 0;
 
-        for (int i = 0; i < monthsArr.length; i++) {
-            if (monthsArr[i] <= monthsArr[monthCount]) {
+        for (int i = 0; i < amountsByMonth.length; i++) {
+            if (amountsByMonth[i] <= amountsByMonth[monthCount]) {
                 monthCount = i;
             }
         }
         return monthCount + 1;
-    };
+    }
 
-    public int findBelowMonthsQuantity(long[] monthsArr) {
-        int average = averageAmountCalc(monthsArr);
+    public int findBelowMonthsQuantity(long[] amountsByMonth) {
+        long average = averageAmountCalc(amountsByMonth);
         int monthsQuatity = 0;
 
-        for (long min : monthsArr) {
+        for (long min : amountsByMonth) {
             if (min < average) {
                 monthsQuatity++;
             }
         }
 
         return monthsQuatity;
-    };
+    }
 
-    public int findHigherMonthsQuantity(long[] monthsArr) {
-        int average = averageAmountCalc(monthsArr);
+    public int findHigherMonthsQuantity(long[] amountsByMonth) {
+        long average = averageAmountCalc(amountsByMonth);
         int monthsQuatity = 0;
 
-        for (long max : monthsArr) {
+        for (long max : amountsByMonth) {
             if (max > average) {
                 monthsQuatity++;
             }
         }
 
         return monthsQuatity;
-    };
+    }
 }

@@ -13,15 +13,15 @@ public class AnalyticalServiceTest {
         int actual = service.allMonthsAmountCalc(amountsPerMonths);
         int expected = 180;
         Assertions.assertEquals(expected, actual);
-    };
+    }
 
     @Test
     public void testAverageAmountCalc() {
-        int actual = service.averageAmountCalc(amountsPerMonths);
+        long actual = service.averageAmountCalc(amountsPerMonths);
         int expected = 15;
 
         Assertions.assertEquals(expected, actual);
-    };
+    }
 
     @Test
     public void testMaxAmountMonthSeek() {
@@ -29,7 +29,7 @@ public class AnalyticalServiceTest {
         int expected = 8;
 
         Assertions.assertEquals(expected, actual);
-    };
+    }
 
     @Test
     public void testMinAmountMonthSeek() {
@@ -37,7 +37,7 @@ public class AnalyticalServiceTest {
         int expected = 9;
 
         Assertions.assertEquals(expected, actual);
-    };
+    }
 
     @Test
     public void testFindBelowMonthsQuantity() {
@@ -45,7 +45,7 @@ public class AnalyticalServiceTest {
         int expected = 5;
 
         Assertions.assertEquals(expected, actual);
-    };
+    }
 
     @Test
     public void testFindHigherMonthsQuantity() {
@@ -54,6 +54,6 @@ public class AnalyticalServiceTest {
 
         Assertions.assertEquals(expected, actual);
 
-    };
+    }
 
 }
